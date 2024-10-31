@@ -94,6 +94,7 @@ img, video {
 
 .slides {
   padding: 12%;
+  max-width: 84%;
   box-sizing: border-box; // Ensures padding is included within width limits
 
   @apply text-left px-16 py-16; // Balanced padding for all screens
