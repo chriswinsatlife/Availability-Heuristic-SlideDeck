@@ -6,6 +6,10 @@
 - Influences decisions
 - Alters perceived likelihood
 ---
+# Image Slide
+#### Text
+![A test image](https://images.unsplash.com/photo-1727709350469-5fde916217a8?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D "Mountain Landscape")
+---
 # Example scenario
 - Employee promotion decision
 - Past mistake impacts judgment
