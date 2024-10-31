@@ -1,4 +1,4 @@
-name: Compile SCSS and Commit to Repository 2
+name: Compile SCSS and Commit to Repository
 
 on:
   push:
@@ -18,22 +18,12 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install Tailwind, PostCSS, and Autoprefixer
+      - name: Install Dependencies
         run: |
-          npm install -D tailwindcss postcss autoprefixer
+          npm install -D tailwindcss postcss autoprefixer sass \
+            tailwindcss-animate class-variance-authority clsx tailwind-merge \
+            lucide-react @radix-ui/react-icons
           npx tailwindcss init
-
-      - name: Install Tailwind
-        run: npm install tailwindcss-animate class-variance-authority clsx tailwind-merge
-
-      - name: Install Icons
-        run: npm install lucide-react
-
-      - name: Install More Icons
-        run: npm install @radix-ui/react-icons
-
-      - name: Install Sass
-        run: npm install -g sass
 
       - name: Create PostCSS Config
         run: |
