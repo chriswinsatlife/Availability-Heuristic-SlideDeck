@@ -437,33 +437,23 @@ video {
 :root {
     --background: 0 0% 100%;
     --foreground: 222.2 47.4% 11.2%;
- 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
- 
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 47.4% 11.2%;
- 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
- 
     --card: 0 0% 100%;
     --card-foreground: 222.2 47.4% 11.2%;
- 
     --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
- 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
- 
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
- 
     --destructive: 0 100% 50%;
     --destructive-foreground: 210 40% 98%;
- 
     --ring: 215 20.2% 65.1%;
- 
     --radius: 0.5rem;
   }
 * {
@@ -487,69 +477,54 @@ body {
   }
 }
 
-/* Add Shadcn*/
+/* ShadCN theme and base settings*/
 
-/* Variables for colors, fonts, and sizing*/
-
-/* Colors*/
+/* Colors, Fonts, and Sizing*/
 $body-bg: rgb(255, 255, 255);
 $body-color: rgb(9, 9, 11);
 $link-color: rgb(18, 18, 33);
-$link-color-hover: rgb(18, 18, 22); /* Hardcoded lighter version of $link-color*/
+$link-color-hover: rgb(18, 18, 22);
 $selection-bg: rgb(228, 228, 231);
 $selection-color: rgb(27, 27, 33);
 
-/* Typgoraphy*/
 $font-family-sans-serif: 'Inter', 'Source Sans Pro', 'Impact', sans-serif;
+$main-font-size: 3.2vmin;
+$presentation-font-size-root: 1em;
+$presentation-block-margin: 2.4vmin;
 $presentation-heading-font: 'Inter', 'Source Sans Pro', 'Impact', sans-serif;
-$main-font-size: 3.2vmin; /* Default font size relative to viewport for scalability*/
-$presentation-font-size-root: 1em; /* Scalable for larger screens*/
-$presentation-block-margin: 2.4vmin; /* More breathing room between blocks*/
 
 /* Headings*/
 $presentation-heading-color: rgb(9, 9, 11);
 $presentation-heading-line-height: 1.4;
 $presentation-heading-letter-spacing: 0.02vmin;
-$presentation-heading-text-transform: none;
 $presentation-heading-font-weight: bold;
 $presentation-h1-font-size: 3.2em;
 $presentation-h2-font-size: 2em;
 $presentation-h3-font-size: 1.4em;
 $presentation-h4-font-size: 1em;
 
-/* Set the root font size on html to be inherited by rem units*/
+/* Root font settings*/
 html {
   font-size: $main-font-size;
   line-height: 1.4;
 }
 
-p, ol, ul, li {
-  margin-bottom: 0.2vmin;
-}
-  
-
-/* Align text left*/
-
-.slides {
-  text-align: left !important;
+/* Responsive adjustments*/
+@media (max-width: 1024px) {
+  html { font-size: 3.0vmin; }
 }
 
-body {
-  text-align: left;
+@media (max-width: 568px) {
+  html { font-size: 2.8vmin; }
 }
 
-p, strong {
-  width: 100%;
-}
-
-/* Reveal.js core styling*/
+/* Reveal.js styling*/
 .reveal {
   background-color: $body-bg;
   color: $body-color;
   font-family: $font-family-sans-serif;
-  font-size: 1rem; /* Inherits from root font size*/
+  font-size: 1rem;
 
-  /* Basic text elements*/
   h1, h2, h3, h4 {
     font-family: $presentation-heading-font;
     color: $body-color;
@@ -557,56 +532,75 @@ p, strong {
   }
 }
 
-/* Adjust font size for different screen sizes*/
-@media (max-width: 1024px) {
-  html { font-size: 3.0vmin; } /* Smaller text for tablets*/
+.slides {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  text-align: left;
 }
 
-@media (max-width: 568px) {
-  html { font-size: 2.8vmin; } /* Even smaller text for mobile devices*/
+p, ol, ul, li {
+  margin-bottom: 0.5rem;
+  width: 100%;
 }
 
-/* Layout using CSS Grid for complex slides (e.g., title slides)*/
+a {
+  color: $link-color;
+  &:hover { color: $link-color-hover; }
+}
+
+/* Code blocks*/
+code, pre {
+  border-radius: 0.25rem;
+  background-color: hsl(var(--muted));
+  padding: 0.5rem;
+  color: hsl(var(--muted-foreground));
+  font-family: 'Fira Code', monospace;
+}
+
+::-moz-selection {
+  background-color: $selection-bg;
+  color: $selection-color;
+}
+
+::selection {
+  background-color: $selection-bg;
+  color: $selection-color;
+}
+
+/* Layout for complex slides*/
 .reveal .slides section.title .grid-wrapper {
   display: grid;
+  height: 100%;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+@media (min-width: 768px) {
+  .reveal .slides section.title .grid-wrapper {
+    padding: 2.5rem;
+  }
+}
+.reveal .slides section.title .grid-wrapper {
   grid-template-areas:
     "header header"
     "content content"
     ". credit";
   grid-template-columns: auto 40%;
   grid-template-rows: 6vmin 1fr auto;
-  height: 100%;
-  padding: 5vmin;
 
   .logo { grid-area: header; }
   .content { grid-area: content; align-self: center; }
   .credit { grid-area: credit; justify-self: end; }
 }
 
-/* Responsive grid adjustment for smaller screens*/
-@media (max-width: 568px) {
+/* Responsive grid adjustment*/
+@media (max-width: 768px) {
   .grid-wrapper {
     grid-template-areas:
       "header"
       "content"
       "credit";
     grid-template-columns: auto;
-    padding: 3vmin;
   }
-}
-
-/* Link styling*/
-a {
-  color: $link-color;
-  &:hover { color: $link-color-hover; }
-}
-
-/* Selection styling*/
-::-moz-selection {
-  background-color: $selection-bg;
-  color: $selection-color;
-}
-::selection {
-  background-color: $selection-bg;
-  color: $selection-color;
 }
