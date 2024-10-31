@@ -18,6 +18,15 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Install Tailwind
+        run: npm install tailwindcss-animate class-variance-authority clsx tailwind-merge
+
+      - name: Install Icons
+        run: npm install lucide-react
+
+      - name: Install More Icons
+        run: npm install @radix-ui/react-icons
+
       - name: Install Sass
         run: npm install -g sass
 
