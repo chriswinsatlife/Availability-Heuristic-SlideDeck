@@ -132,11 +132,11 @@ p, strong {
 
 // Adjust font size for different screen sizes
 @media (max-width: 1024px) {
-  html { font-size: 1.8vmin; } // Smaller text for tablets
+  html { font-size: 3.0vmin; } // Smaller text for tablets
 }
 
 @media (max-width: 568px) {
-  html { font-size: 1.5vmin; } // Even smaller text for mobile devices
+  html { font-size: 2.8vmin; } // Even smaller text for mobile devices
 }
 
 // Layout using CSS Grid for complex slides (e.g., title slides)
