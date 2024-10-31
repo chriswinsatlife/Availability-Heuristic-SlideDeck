@@ -68,6 +68,12 @@ $presentation-h4-font-size: 1.5vw;
 html {
   font-size: 2vmin; // Base font size scales with viewport minimum size for flexibility
   line-height: 1.5;
+  text-align: left;
+}
+
+p, strong {
+  width: 100%;
+  text-align: left;
 }
 
 .reveal {
@@ -101,8 +107,9 @@ html {
 }
 
 p, ol, ul, li {
-  margin-bottom: 1vmin;
+  margin-bottom: 1.2vmin;
   width: 100%;
+  text-align: left;
 }
 
 a {
