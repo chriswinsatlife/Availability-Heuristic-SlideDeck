@@ -487,7 +487,7 @@ $presentation-heading-font: 'Inter', 'Source Sans Pro', sans-serif;
 html {
   font-size: 2.0vw; /* Adjusted base for better readability*/
   line-height: 1.4; /* Improved line spacing*/
-  padding: 8vmin; /* Extra padding to prevent text cutoff*/
+  padding: 12%; /* Extra padding to prevent text cutoff*/
   text-align: left;
 }
 
@@ -498,7 +498,7 @@ html {
   font-family: $font-family-sans-serif;
   font-size: 1.6rem; /* Body font larger for balance*/
   text-align: left;
-  padding: 16vmin; /* Consistent padding on all sides*/
+  padding: 12%; /* Consistent padding on all sides*/
 
   h1, h2, h3, h4 {
     font-family: $presentation-heading-font;
@@ -515,7 +515,7 @@ html {
 }
 
 .slides {
-  padding: 16vmin;
+  padding: 12%;
   padding-left: 3rem;
   padding-right: 3rem;
   padding-top: 3rem;
@@ -524,15 +524,15 @@ html {
 
   /* Padding adjustments for smaller screens*/
   @media (max-width: 1024px) {
-    padding: 8vmin;
+    padding: 8%;
   }
 
   @media (max-width: 768px) {
-    padding: 6vmin;
+    padding: 6%;
   }
 
   @media (max-width: 568px) {
-    padding: 4vmin;
+    padding: 4%;
   }
 }
 
