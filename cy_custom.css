@@ -524,6 +524,7 @@ img, video {
 
 .slides {
   padding: 12%;
+  max-width: 84%;
   box-sizing: border-box; /* Ensures padding is included within width limits*/ padding-left: 4rem; padding-right: 4rem; padding-top: 4rem; padding-bottom: 4rem; text-align: left; /* Balanced padding for all screens*/
 
   /* Padding adjustments for smaller screens*/
