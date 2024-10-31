@@ -1,5 +1,5 @@
 html {
-  font-size: 8vmin;
+  font-size: 2vmin;
 }
 
 .slides {
@@ -18,7 +18,7 @@ p, strong {
   background-color: #1e1e2f;
   color: #ececec;
   font-family: "Inter", "Source Sans Pro", "Impact", sans-serif;
-  font-size: 4rem;
+  font-size: 1rem;
 }
 .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
   font-family: "Inter", "Source Sans Pro", "Impact", sans-serif;
@@ -28,12 +28,12 @@ p, strong {
 
 @media (max-width: 1024px) {
   html {
-    font-size: 3.6vmin;
+    font-size: 1.8vmin;
   }
 }
 @media (max-width: 568px) {
   html {
-    font-size: 3vmin;
+    font-size: 1.5vmin;
   }
 }
 .reveal .slides section.title .grid-wrapper {
