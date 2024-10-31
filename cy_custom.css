@@ -455,6 +455,7 @@ body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
     font-feature-settings: "rlig" 1, "calt" 1;
+    text-align: left;
 }
 @keyframes enter {
   from {
@@ -480,7 +481,7 @@ $selection-bg: rgb(228, 228, 231);
 $selection-color: rgb(27, 27, 33);
 
 $font-family-sans-serif: 'Inter', 'Source Sans Pro', sans-serif;
-$main-font-size: 2.8vmin;
+$main-font-size: 3.6vmin;
 $presentation-font-size-root: 1em;
 $presentation-heading-font: 'Inter', 'Source Sans Pro', sans-serif;
 
@@ -496,6 +497,7 @@ $presentation-h4-font-size: 1.5vw;
 html {
   font-size: $main-font-size;
   line-height: 1.5;
+  text-align: left;
 }
 
 /* Responsive Reveal.js Styling*/
