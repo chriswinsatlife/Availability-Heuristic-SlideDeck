@@ -523,15 +523,15 @@ html {
 
   /* Padding adjustments for smaller screens*/
   @media (max-width: 1024px) {
-    padding: 5vmin;
+    padding: 8vmin;
   }
 
   @media (max-width: 768px) {
-    padding: 4vmin;
+    padding: 6vmin;
   }
 
   @media (max-width: 568px) {
-    padding: 3vmin;
+    padding: 4vmin;
   }
 }
 
@@ -543,36 +543,36 @@ html {
     padding: 5vmin;
   }
 
-  h1 { font-size: 3.5rem; }
+  h1 { font-size: 3.2rem; }
   h2 { font-size: 2.8rem; }
   h3 { font-size: 2.2rem; }
   h4 { font-size: 1.8rem; }
 }
 
 @media (max-width: 768px) {
-  html { font-size: 1.4vw; }
+  html { font-size: 1.5vw; }
 
   .reveal {
     padding: 4vmin;
   }
 
   h1 { font-size: 3rem; }
-  h2 { font-size: 2.5rem; }
-  h3 { font-size: 1.9rem; }
-  h4 { font-size: 1.6rem; }
+  h2 { font-size: 2.6rem; }
+  h3 { font-size: 2.0rem; }
+  h4 { font-size: 1.8rem; }
 }
 
 @media (max-width: 568px) {
-  html { font-size: 1.3vw; }
+  html { font-size: 1.4vw; }
 
   .reveal {
     padding: 3vmin;
   }
 
-  h1 { font-size: 2.8rem; }
-  h2 { font-size: 2.3rem; }
-  h3 { font-size: 1.8rem; }
-  h4 { font-size: 1.4rem; }
+  h1 { font-size: 3.0rem; }
+  h2 { font-size: 2.6rem; }
+  h3 { font-size: 2.0rem; }
+  h4 { font-size: 1.8rem; }
 }
 
 /* Paragraph and list styling with improved readability*/
@@ -580,6 +580,7 @@ p, ol, ul, li {
   margin-bottom: 1.2rem; /* Reduced space for compact layout*/
   width: 100%;
   text-align: left;
+  font-size: 1.6rem;
 }
 
 a {
