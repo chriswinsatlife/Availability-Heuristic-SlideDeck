@@ -1,4 +1,4 @@
-name: Compile SCSS and Save as Artifact
+name: Compile SCSS and Commit to Repository
 
 on:
   push:
@@ -24,8 +24,12 @@ jobs:
       - name: Compile SCSS to CSS
         run: sass cy_custom.scss cy_custom.css
 
-      - name: Upload CSS as Artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: compiled-css
-          path: cy_custom.css
+      - name: Commit and Push CSS
+        env:
+          PAT: ${{ secrets.GH_PAT }}  # Your PAT token saved in repository secrets
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add cy_custom.css
+          git commit -m "Compile SCSS to CSS"
+          git push "https://${{ secrets.PAT }}@github.com/${{ github.repository }}.git" HEAD:main
