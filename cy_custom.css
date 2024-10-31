@@ -483,62 +483,90 @@ $selection-color: rgb(27, 27, 33);
 $font-family-sans-serif: 'Inter', 'Source Sans Pro', sans-serif;
 $presentation-heading-font: 'Inter', 'Source Sans Pro', sans-serif;
 
-/* Base font size for desktop readability with viewport scaling*/
+/* Body font size with slightly increased line height for readability*/
 html {
-  font-size: 1.2vw; /* Scales with viewport width for consistent presentation size*/
-  line-height: 1.6;
+  font-size: 1.8vw; /* Scales with viewport width for consistent sizing*/
+  line-height: 1.8; /* Larger line height for better readability*/
+  padding: 2vmin; /* General padding on all sides*/
   text-align: left;
 }
 
-/* Padding for reveal and slides sections*/
+/* Reveal.js container styling with increased padding and balanced font sizes*/
 .reveal {
   background-color: $body-bg;
   color: $body-color;
   font-family: $font-family-sans-serif;
-  font-size: 1.5rem;
-  text-align: left;
-  padding: 5vmin 8vmin; /* Ample padding on larger screens*/
+  font-size: 1.2rem; /* Slightly larger base font size*/
+  padding: 5vmin; /* Consistent padding on all sides for large viewports*/
 
   h1, h2, h3, h4 {
     font-family: $presentation-heading-font;
     color: $body-color;
-    line-height: 1.2;
+    line-height: 1.4; /* Increased line height for headings*/
     text-align: left;
     margin: 0 0 1rem 0;
   }
 
-  h1 { font-size: 6vw; }
-  h2 { font-size: 4.5vw; }
-  h3 { font-size: 3.5vw; }
-  h4 { font-size: 2.5vw; }
+  h1 { font-size: 4rem; } /* Scalable for large screens*/
+  h2 { font-size: 3rem; }
+  h3 { font-size: 2.2rem; }
+  h4 { font-size: 1.8rem; }
 }
 
 .slides {
-  padding-left: 4rem;
-  padding-right: 4rem;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  text-align: left; /* Larger padding for slides to ensure readability*/
-
-  /* Responsive padding adjustments for different screens*/
-  @media (max-width: 1024px) {
-    padding: 6vmin;
-  }
-
-  @media (max-width: 768px) {
-    padding: 5vmin;
-  }
-
-  @media (max-width: 568px) {
-    padding: 4vmin;
-  }
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  text-align: left; /* Balanced padding for all screens*/
 }
 
-/* Paragraph and list styling*/
+/* Responsive heading adjustments for smaller viewports*/
+@media (max-width: 1024px) {
+  html { font-size: 1.6vw; }
+
+  .reveal {
+    padding: 4vmin;
+  }
+
+  h1 { font-size: 3.5rem; }
+  h2 { font-size: 2.8rem; }
+  h3 { font-size: 2rem; }
+  h4 { font-size: 1.6rem; }
+}
+
+@media (max-width: 768px) {
+  html { font-size: 1.4vw; }
+
+  .reveal {
+    padding: 3.5vmin;
+  }
+
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2.5rem; }
+  h3 { font-size: 1.8rem; }
+  h4 { font-size: 1.4rem; }
+}
+
+@media (max-width: 568px) {
+  html { font-size: 1.2vw; }
+
+  .reveal {
+    padding: 3vmin; /* Padding adjustment for small screens*/
+  }
+
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.6rem; }
+  h4 { font-size: 1.2rem; }
+}
+
+/* Paragraph and list styling with consistent spacing*/
 p, ol, ul, li {
-  margin-bottom: 2rem; /* Increased space between text elements for clarity*/
+  margin-bottom: 1.5rem; /* Moderate space between text elements*/
   width: 100%;
   text-align: left;
+  font-size: 1.2rem; /* Scalable body font for readability*/
 }
 
 a {
@@ -549,8 +577,8 @@ a {
 code, pre {
   border-radius: 0.25rem;
   background-color: hsl(var(--muted));
-  padding: 1rem;
-  color: hsl(var(--muted-foreground)); /* Ample padding for code blocks*/
+  padding: 0.75rem;
+  color: hsl(var(--muted-foreground)); /* Enhanced padding for code blocks*/
   font-family: 'Fira Code', monospace;
   text-align: left;
 }
@@ -565,12 +593,12 @@ code, pre {
   color: $selection-color;
 }
 
-/* Flexible Layout for Complex Slides*/
+/* Grid layout adjustments for complex slide sections*/
 .reveal .slides section.title .grid-wrapper {
   display: grid;
   height: 100%;
-  gap: 2rem;
-  padding: 2.5rem; /* Generous padding and spacing for grid layout*/
+  gap: 1.5rem;
+  padding: 2rem; /* Consistent padding and spacing for grid layout*/
   grid-template-areas:
     "header header"
     "content content"
@@ -583,11 +611,10 @@ code, pre {
   .credit { grid-area: credit; justify-self: end; }
 }
 
-/* Responsive grid layout adjustments for smaller screens*/
 @media (max-width: 1024px) {
   .grid-wrapper {
     grid-template-columns: 1fr;
-    padding: 6vmin;
+    padding: 5vmin;
   }
 }
 
@@ -597,6 +624,6 @@ code, pre {
       "header"
       "content"
       "credit";
-    padding: 5vmin;
+    padding: 4vmin;
   }
 }
