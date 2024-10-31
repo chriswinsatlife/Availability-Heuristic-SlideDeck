@@ -18,6 +18,11 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Install Tailwind, PostCSS, and Autoprefixer
+        run: |
+          npm install -D tailwindcss postcss autoprefixer
+          npx tailwindcss init
+
       - name: Install Tailwind
         run: npm install tailwindcss-animate class-variance-authority clsx tailwind-merge
 
