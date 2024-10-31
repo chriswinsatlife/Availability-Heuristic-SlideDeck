@@ -1,7 +1,4 @@
 ---
-revealOptions:
-  transition: 'fade'
----
 
 # Availability Heuristic
 ## An introduction
