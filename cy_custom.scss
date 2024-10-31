@@ -98,7 +98,7 @@ $selection-color: rgb(27, 27, 33);
 $font-family-sans-serif: 'Inter', 'Source Sans Pro', 'Impact', sans-serif;
 $presentation-heading-font: 'Inter', 'Source Sans Pro', 'Impact', sans-serif;
 $main-font-size: 3.2vmin; // Default font size relative to viewport for scalability
-$presentation-font-size-root: 3.2vmin; // Scalable for larger screens
+$presentation-font-size-root: 1em; // Scalable for larger screens
 $presentation-block-margin: 2.4vmin; // More breathing room between blocks
 
 // Headings
