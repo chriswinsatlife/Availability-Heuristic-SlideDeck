@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Availability-Heuristic-SlideDeck</title>
+
+    <!-- Load Reveal.js core CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.css">
+    <link rel="stylesheet" href="dracula.css" id="theme"> <!-- Custom Dracula theme CSS -->
+
+    <!-- Import Inter font from Google Fonts -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+      /* Left-align text and set font family */
+      .reveal .slides {
+        font-family: 'Inter', sans-serif;
+        text-align: left;
+      }
+
+      /* Increase font size for bold text to make it stand out as a "title" */
+      .reveal .slides strong {
+        font-size: 1.5em;
+        display: block;
+        margin-bottom: 0.5em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Load dynamically named Markdown file -->
+        <section data-markdown="Availability-Heuristic-SlideDeck.md"
+                 data-separator="^---$"
+                 data-separator-vertical="^--$"
+                 data-separator-notes="^Note:"
+                 data-charset="utf-8">
+        </section>
+      </div>
+    </div>
+
+    <!-- Load Reveal.js and its plugins from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/markdown/markdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/highlight/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/notes/notes.min.js"></script>
+
+    <!-- Initialize Reveal.js with default settings -->
+    <script>
+      Reveal.initialize({
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+        width: 960,
+        height: 700,
+        margin: 0.04,
+        minScale: 0.2,
+        maxScale: 1.0,
+      });
+    </script>
+  </body>
+</html>
