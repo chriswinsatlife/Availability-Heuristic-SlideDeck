@@ -1,5 +1,10 @@
 // Responsive Reveal.js Theme with SCSS
 
+// Add Tailwind
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 // Variables for colors, fonts, and sizing
 $body-bg: rgb(228, 228, 231);
 $body-color: rgb(9, 9, 11);
