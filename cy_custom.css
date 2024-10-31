@@ -518,16 +518,13 @@ img, video {
     max-width: 100%;
     height: auto;
     display: block;
+    box-sizing: border-box;
     border-radius: 16px;
 }
 
 .slides {
   padding: 12%;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  text-align: left; /* Balanced padding for all screens*/
+  box-sizing: border-box; /* Ensures padding is included within width limits*/ padding-left: 4rem; padding-right: 4rem; padding-top: 4rem; padding-bottom: 4rem; text-align: left; /* Balanced padding for all screens*/
 
   /* Padding adjustments for smaller screens*/
   @media (max-width: 1024px) {
