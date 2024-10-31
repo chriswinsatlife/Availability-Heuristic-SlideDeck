@@ -25,7 +25,7 @@ jobs:
              run: sass cy_custom.scss cy_custom.css
       
       - name: Commit compiled CSS
-         env:
+        env:
           GH_PAT: ${{ secrets.GH_PAT }}  # Reference the PAT secret
         run: |
           git config --global user.name "github-actions"
