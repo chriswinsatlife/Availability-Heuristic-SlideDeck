@@ -1,0 +1,38 @@
+/* Dracula Theme Custom Styling for Reveal.js */
+:root {
+  --background-color: #282a36;
+  --text-color: #f8f8f2;
+  --heading-color: #bd93f9;
+  --border-color: #6272a4;
+  --link-color: #ff79c6;
+}
+
+/* Background and text */
+.reveal {
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Heading colors */
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+  color: var(--heading-color);
+}
+
+/* Strong text for emphasis */
+.reveal .slides strong {
+  color: var(--heading-color);
+  font-size: 1.5em;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+/* Links */
+.reveal a {
+  color: var(--link-color);
+}
+
+/* Slide borders */
+.reveal .slides > section {
+  border: 1px solid var(--border-color);
+  padding: 1em;
+}
