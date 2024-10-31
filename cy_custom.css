@@ -1,5 +1,5 @@
 html {
-  font-size: 2vmin;
+  font-size: 3.2vmin;
 }
 
 .slides {
@@ -15,14 +15,14 @@ p, strong {
 }
 
 .reveal {
-  background-color: #1e1e2f;
-  color: #ececec;
+  background-color: rgb(228, 228, 231);
+  color: rgb(9, 9, 11);
   font-family: "Inter", "Source Sans Pro", "Impact", sans-serif;
   font-size: 1rem;
 }
 .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
   font-family: "Inter", "Source Sans Pro", "Impact", sans-serif;
-  color: #ececec;
+  color: rgb(9, 9, 11);
   margin: 0 0 1rem 0;
 }
 
@@ -64,15 +64,15 @@ p, strong {
   }
 }
 a {
-  color: #00d1b2;
+  color: rgb(18, 18, 33);
 }
 a:hover {
-  color: #33e6c6;
+  color: rgb(18, 18, 22);
 }
 
 ::selection {
-  background-color: #ff5e99;
-  color: #ffffff;
+  background-color: rgb(228, 228, 231);
+  color: rgb(27, 27, 33);
 }
 
 /*# sourceMappingURL=cy_custom.css.map */
