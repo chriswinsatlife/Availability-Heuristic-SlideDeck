@@ -9,7 +9,7 @@ $selection-bg: #ff5e99;
 $selection-color: #ffffff;
 $font-family-sans-serif: 'Inter', 'Source Sans Pro', 'Impact', sans-serif;
 $presentation-heading-font: 'Inter', 'Source Sans Pro', 'Impact', sans-serif;
-$main-font-size: 8vmin; // Default font size relative to viewport for scalability
+$main-font-size: 2vmin; // Default font size relative to viewport for scalability
 
 // Set the root font size on html to be inherited by rem units
 html {
@@ -35,7 +35,7 @@ p, strong {
   background-color: $body-bg;
   color: $body-color;
   font-family: $font-family-sans-serif;
-  font-size: 4rem; // Inherits from root font size
+  font-size: 1rem; // Inherits from root font size
 
   // Basic text elements
   h1, h2, h3, h4 {
@@ -47,11 +47,11 @@ p, strong {
 
 // Adjust font size for different screen sizes
 @media (max-width: 1024px) {
-  html { font-size: 3.6vmin; } // Smaller text for tablets
+  html { font-size: 1.8vmin; } // Smaller text for tablets
 }
 
 @media (max-width: 568px) {
-  html { font-size: 3.0vmin; } // Even smaller text for mobile devices
+  html { font-size: 1.5vmin; } // Even smaller text for mobile devices
 }
 
 // Layout using CSS Grid for complex slides (e.g., title slides)
