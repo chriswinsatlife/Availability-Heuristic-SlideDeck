@@ -7,7 +7,7 @@ $link-color: #00d1b2;
 $link-color-hover: lighten($link-color, 15%);
 $font-family-sans-serif: 'Inter', 'Source Sans Pro', 'Impact', sans-serif;
 $presentation-heading-font: 'Inter', 'Source Sans Pro', 'Impact', sans-serif;
-$main-font-size: 2vmin; // Default font size relative to viewport for scalability
+$main-font-size: 4vmin; // Default font size relative to viewport for scalability
 
 // Set the root font size on html to be inherited by rem units
 html {
