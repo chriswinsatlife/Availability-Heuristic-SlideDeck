@@ -22,7 +22,7 @@ jobs:
         run: npm install -g sass
 
       - name: Compile SCSS to CSS
-        run: sass scss/cy_custom.scss css/cy_custom.css
+        run: sass cy_custom.scss cy_custom.css
 
       - name: Commit compiled CSS
         run: |
