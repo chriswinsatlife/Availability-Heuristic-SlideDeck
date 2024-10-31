@@ -1,4 +1,4 @@
-name: Compile SCSS and Deploy to GitHub Pages
+name: Compile SCSS and Deploy to GitHub
 
 on:
   push:
