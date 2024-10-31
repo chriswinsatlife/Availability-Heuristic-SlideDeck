@@ -20,17 +20,17 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          npm install -D tailwindcss postcss autoprefixer sass \
+          npm install -D tailwindcss postcss postcss-cli postcss-scss autoprefixer sass \
             tailwindcss-animate class-variance-authority clsx tailwind-merge \
             lucide-react @radix-ui/react-icons
           npx tailwindcss init
 
       - name: Create PostCSS Config
         run: |
-          echo "module.exports = { plugins: { tailwindcss: {}, autoprefixer: {}, } };" > postcss.config.js
+          echo "module.exports = { parser: 'postcss-scss', plugins: { tailwindcss: {}, autoprefixer: {}, } };" > postcss.config.js
 
       - name: Compile SCSS to CSS with Tailwind
-        run: npx postcss-cli postcss cy_custom.scss -o cy_custom.css
+        run: npx postcss cy_custom.scss -o cy_custom.css
 
       - name: Commit and Push CSS
         env:
