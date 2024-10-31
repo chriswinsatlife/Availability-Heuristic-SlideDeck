@@ -68,7 +68,7 @@ html {
   font-family: $font-family-sans-serif;
   font-size: 1.6rem; // Body font larger for balance
   text-align: left;
-  padding: 12vmin; // Consistent padding on all sides
+  padding: 16vmin; // Consistent padding on all sides
 
   h1, h2, h3, h4 {
     font-family: $presentation-heading-font;
@@ -85,6 +85,8 @@ html {
 }
 
 .slides {
+  padding: 16vmin;
+  
   @apply text-left px-12 py-12; // Balanced padding for all screens
 
   // Padding adjustments for smaller screens
