@@ -35,8 +35,12 @@ jobs:
       - name: Install Sass
         run: npm install -g sass
 
-      - name: Compile SCSS to CSS
-        run: sass cy_custom.scss cy_custom.css
+      - name: Create PostCSS Config
+        run: |
+          echo "module.exports = { plugins: { tailwindcss: {}, autoprefixer: {}, } };" > postcss.config.js
+
+      - name: Compile SCSS to CSS with Tailwind
+        run: npx postcss cy_custom.scss -o cy_custom.css
 
       - name: Commit and Push CSS
         env:
