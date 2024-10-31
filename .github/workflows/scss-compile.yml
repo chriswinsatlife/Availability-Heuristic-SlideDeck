@@ -1,4 +1,4 @@
-name: Compile SCSS and Commit to Repository
+name: Compile SCSS and Commit to Repository 2
 
 on:
   push:
