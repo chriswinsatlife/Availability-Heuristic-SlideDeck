@@ -82,6 +82,7 @@ p, strong {
   font-family: $font-family-sans-serif;
   font-size: 2rem;
   text-align: left;
+  padding: 4vmin 6vmin; // Add padding around the content on all viewports
 
   h1, h2, h3, h4 {
     font-family: $presentation-heading-font;
@@ -98,21 +99,21 @@ p, strong {
 }
 
 .slides {
-  @apply text-left px-8 py-6;
+  @apply text-left px-12 py-10; // Add larger padding for slides
 
   // Adjust padding for bigger screens
   @media (max-width: 1024px) {
-    padding: 8vmin;
+    padding: 12vmin;
   }
   
   // Adjust padding for smaller screens
   @media (max-width: 768px) {
-    padding: 4vmin;
+    padding: 6vmin;
   }
 }
 
 p, ol, ul, li {
-  margin-bottom: 1.2vmin;
+  margin-bottom: 1.5rem; // Add more space between text elements
   width: 100%;
   text-align: left;
 }
@@ -123,7 +124,7 @@ a {
 }
 
 code, pre {
-  @apply bg-muted text-muted-foreground p-2 rounded;
+  @apply bg-muted text-muted-foreground p-3 rounded; // Add padding inside code blocks
   font-family: 'Fira Code', monospace;
 }
 
@@ -134,7 +135,7 @@ code, pre {
 
 // Flexible Layout for Complex Slides
 .reveal .slides section.title .grid-wrapper {
-  @apply grid h-full p-6 gap-4;
+  @apply grid h-full p-8 gap-6; // Increase padding and spacing for grid wrapper
   grid-template-areas:
     "header header"
     "content content"
@@ -151,7 +152,7 @@ code, pre {
 @media (max-width: 1024px) {
   .grid-wrapper {
     grid-template-columns: 1fr;
-    padding: 3vmin;
+    padding: 6vmin;
   }
 }
 
@@ -161,7 +162,7 @@ code, pre {
       "header"
       "content"
       "credit";
-    padding: 3vmin;
+    padding: 5vmin;
   }
 }
 
@@ -169,6 +170,6 @@ code, pre {
 @media (max-width: 568px) {
   html { font-size: 2.5vmin; }
   .slides {
-    padding: 2vmin;
+    padding: 3vmin;
   }
 }
