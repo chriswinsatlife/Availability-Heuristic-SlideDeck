@@ -1,94 +1,59 @@
----
-
 # Availability Heuristic
-## An introduction
-
+### An introduction
 ---
-
-# Understanding the Concept
+# Understanding the concept
 - Relies on immediate examples
 - Influences decisions
 - Alters perceived likelihood
-
 ---
-
-# Example Scenario
+# Example scenario
 - Employee promotion decision
 - Past mistake impacts judgment
 - Memorable events weigh more
-
-<!-- .element: data-background-image="path/to/image1.png" -->
-
+*(Image here: Illustration of decision-making influenced by a vivid memory)*
 ---
-
-# Related Biases
+# Related biases
 - Framing effect
 - Mental accounting
 - Cognitive dissonance
-
 ---
-
-# Impact on Industries
+# Impact on industries
 - Behavioral product design
 - Risk management
 - Consumer insights
-
-<!-- .element: data-background-image="path/to/image2.png" -->
-
+*(Image here: Diagram of industries affected by behavioral biases)*
 ---
-
-# Success Stories in Consulting
+# Success stories in consulting
 - Revenue increase for insurers
 - Mental health platform redesign
 - Software design efficiency
-
 ---
-
-# About the Authors
-
-<!-- .element: data-background-image="path/to/dan_pilat_headshot.png" -->
-
+# About the authors
+*(Image here: Headshot of Dan Pilat)*
 - **Dan Pilat**
   - Co-founder
   - Author and educator
-
 ---
-
-# About the Authors
-
-<!-- .element: data-background-image="path/to/sekoul_krastev_headshot.png" -->
-
+# About the authors
+*(Image here: Headshot of Dr. Sekoul Krastev)*
 - **Dr. Sekoul Krastev**
   - Co-founder
   - PhD in Decision Neuroscience
-
 ---
-
 # References
-
 - Kahneman, D. (2015). *Thinking, Fast and Slow*. Farrar, Straus, and Giroux.
 - Tversky, A., Kahneman, D. (1973). Availability: A heuristic for judging frequency and probability.
-
 ---
-
-# Additional References
-
+# References
 - Korteling, J. E., et al. (2018). A neural network framework for cognitive biases.
-
 ---
-
-# Get in Touch
-
-<!-- .element: data-background-image="path/to/contact_form_illustration.png" -->
-
+# Get in touch
+*(Image here: Contact form illustration)*
 - Interested in consulting?
 - Learn more about behavioral science!
-
 ---
-
 # Career Opportunities
-
 - Join our team
 - Make an impact with behavioral science
-
-<!-- .element: data-background-image="path/to/diverse_team_collaborating.png" -->
+*(Image here: Illustration of a diverse team collaborating)*
+---
