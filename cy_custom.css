@@ -494,41 +494,41 @@ $presentation-h2-font-size: 3vw;
 $presentation-h3-font-size: 2vw;
 $presentation-h4-font-size: 1.5vw;
 
+/* Responsive font sizes based on viewport*/
 html {
-  font-size: $main-font-size;
+  font-size: 2vmin; /* Base font size scales with viewport minimum size for flexibility*/
   line-height: 1.5;
-  text-align: left;
 }
 
-.slides, p, strong {
-  width: 100%;
-}
-
-/* Responsive Reveal.js Styling*/
 .reveal {
   background-color: $body-bg;
   color: $body-color;
   font-family: $font-family-sans-serif;
   font-size: 1rem;
+  text-align: left;
 
   h1, h2, h3, h4 {
     font-family: $presentation-heading-font;
     color: $body-color;
     line-height: 1.2;
+    text-align: left;
     margin: 0 0 1rem 0;
   }
 
-  h1 { font-size: $presentation-h1-font-size; }
-  h2 { font-size: $presentation-h2-font-size; }
-  h3 { font-size: $presentation-h3-font-size; }
-  h4 { font-size: $presentation-h4-font-size; }
+  h1 { font-size: 5vmin; }
+  h2 { font-size: 4vmin; }
+  h3 { font-size: 3vmin; }
+  h4 { font-size: 2.5vmin; }
 }
 
 .slides {
-  padding: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   text-align: left;
 
-  /* Responsive padding for smaller screens*/
+  /* Adjust padding for smaller screens*/
   @media (max-width: 768px) {
     padding: 4vmin;
   }
@@ -580,6 +580,7 @@ code, pre {
   .credit { grid-area: credit; justify-self: end; }
 }
 
+/* Responsive grid layout for smaller screens*/
 @media (max-width: 1024px) {
   .grid-wrapper {
     grid-template-columns: 1fr;
@@ -597,9 +598,9 @@ code, pre {
   }
 }
 
-/* Adjust text and padding for very small screens*/
+/* Adjust font sizes and padding for very small screens*/
 @media (max-width: 568px) {
-  html { font-size: 2.6vmin; }
+  html { font-size: 2.5vmin; }
   .slides {
     padding: 2vmin;
   }
