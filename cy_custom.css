@@ -496,9 +496,9 @@ html {
   background-color: $body-bg;
   color: $body-color;
   font-family: $font-family-sans-serif;
-  font-size: 1.3rem; /* Body font larger for balance*/
+  font-size: 1.6rem; /* Body font larger for balance*/
   text-align: left;
-  padding: 6vmin; /* Consistent padding on all sides*/
+  padding: 12vmin; /* Consistent padding on all sides*/
 
   h1, h2, h3, h4 {
     font-family: $presentation-heading-font;
