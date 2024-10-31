@@ -86,6 +86,7 @@ html {
 
 .slides {
   padding: 8vmin;
+  max-width: 88%;
 
   @apply text-left px-16 py-16; // Balanced padding for all screens
 
