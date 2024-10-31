@@ -1,6 +1,6 @@
 /* Responsive Reveal.js Theme with SCSS*/
 
-/* Add Tailwind*/
+/* Add Tailwind for utility-first styling*/
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -442,18 +442,10 @@ video {
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 47.4% 11.2%;
     --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
     --card: 0 0% 100%;
     --card-foreground: 222.2 47.4% 11.2%;
     --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 100% 50%;
-    --destructive-foreground: 210 40% 98%;
-    --ring: 215 20.2% 65.1%;
     --radius: 0.5rem;
   }
 * {
@@ -477,7 +469,7 @@ body {
   }
 }
 
-/* ShadCN theme and base settings*/
+/* ShadCN theme variables for consistent color and style*/
 
 /* Colors, Fonts, and Sizing*/
 $body-bg: rgb(255, 255, 255);
@@ -487,38 +479,26 @@ $link-color-hover: rgb(18, 18, 22);
 $selection-bg: rgb(228, 228, 231);
 $selection-color: rgb(27, 27, 33);
 
-$font-family-sans-serif: 'Inter', 'Source Sans Pro', 'Impact', sans-serif;
-$main-font-size: 3.2vmin;
+$font-family-sans-serif: 'Inter', 'Source Sans Pro', sans-serif;
+$main-font-size: 2.8vmin;
 $presentation-font-size-root: 1em;
-$presentation-block-margin: 2.4vmin;
-$presentation-heading-font: 'Inter', 'Source Sans Pro', 'Impact', sans-serif;
+$presentation-heading-font: 'Inter', 'Source Sans Pro', sans-serif;
 
-/* Headings*/
-$presentation-heading-color: rgb(9, 9, 11);
+/* Headings and text elements*/
 $presentation-heading-line-height: 1.4;
 $presentation-heading-letter-spacing: 0.02vmin;
 $presentation-heading-font-weight: bold;
-$presentation-h1-font-size: 3.2em;
-$presentation-h2-font-size: 2em;
-$presentation-h3-font-size: 1.4em;
-$presentation-h4-font-size: 1em;
+$presentation-h1-font-size: 4vw;
+$presentation-h2-font-size: 3vw;
+$presentation-h3-font-size: 2vw;
+$presentation-h4-font-size: 1.5vw;
 
-/* Root font settings*/
 html {
   font-size: $main-font-size;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
-/* Responsive adjustments*/
-@media (max-width: 1024px) {
-  html { font-size: 3.0vmin; }
-}
-
-@media (max-width: 568px) {
-  html { font-size: 2.8vmin; }
-}
-
-/* Reveal.js styling*/
+/* Responsive Reveal.js Styling*/
 .reveal {
   background-color: $body-bg;
   color: $body-color;
@@ -528,20 +508,28 @@ html {
   h1, h2, h3, h4 {
     font-family: $presentation-heading-font;
     color: $body-color;
+    line-height: 1.2;
     margin: 0 0 1rem 0;
   }
+
+  h1 { font-size: $presentation-h1-font-size; }
+  h2 { font-size: $presentation-h2-font-size; }
+  h3 { font-size: $presentation-h3-font-size; }
+  h4 { font-size: $presentation-h4-font-size; }
 }
 
 .slides {
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding: 2rem;
   text-align: left;
+
+  /* Responsive padding for smaller screens*/
+  @media (max-width: 768px) {
+    padding: 4vmin;
+  }
 }
 
 p, ol, ul, li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1vmin;
   width: 100%;
 }
 
@@ -550,7 +538,6 @@ a {
   &:hover { color: $link-color-hover; }
 }
 
-/* Code blocks*/
 code, pre {
   border-radius: 0.25rem;
   background-color: hsl(var(--muted));
@@ -569,38 +556,45 @@ code, pre {
   color: $selection-color;
 }
 
-/* Layout for complex slides*/
+/* Flexible Layout for Complex Slides*/
 .reveal .slides section.title .grid-wrapper {
   display: grid;
   height: 100%;
   gap: 1rem;
   padding: 1.5rem;
-}
-@media (min-width: 768px) {
-  .reveal .slides section.title .grid-wrapper {
-    padding: 2.5rem;
-  }
-}
-.reveal .slides section.title .grid-wrapper {
   grid-template-areas:
     "header header"
     "content content"
     ". credit";
   grid-template-columns: auto 40%;
-  grid-template-rows: 6vmin 1fr auto;
+  grid-template-rows: 8vmin 1fr auto;
 
   .logo { grid-area: header; }
   .content { grid-area: content; align-self: center; }
   .credit { grid-area: credit; justify-self: end; }
 }
 
-/* Responsive grid adjustment*/
+@media (max-width: 1024px) {
+  .grid-wrapper {
+    grid-template-columns: 1fr;
+    padding: 3vmin;
+  }
+}
+
 @media (max-width: 768px) {
   .grid-wrapper {
     grid-template-areas:
       "header"
       "content"
       "credit";
-    grid-template-columns: auto;
+    padding: 3vmin;
+  }
+}
+
+/* Adjust text and padding for very small screens*/
+@media (max-width: 568px) {
+  html { font-size: 2.6vmin; }
+  .slides {
+    padding: 2vmin;
   }
 }
