@@ -85,15 +85,32 @@
 }
 
 // Variables for colors, fonts, and sizing
+
+// Colors
 $body-bg: rgb(228, 228, 231);
 $body-color: rgb(9, 9, 11);
 $link-color: rgb(18, 18, 33);
 $link-color-hover: rgb(18, 18, 22); // Hardcoded lighter version of $link-color
 $selection-bg: rgb(228, 228, 231);
 $selection-color: rgb(27, 27, 33);
+
+// Typgoraphy
 $font-family-sans-serif: 'Inter', 'Source Sans Pro', 'Impact', sans-serif;
 $presentation-heading-font: 'Inter', 'Source Sans Pro', 'Impact', sans-serif;
 $main-font-size: 3.2vmin; // Default font size relative to viewport for scalability
+$presentation-font-size-root: 3.2vmin; // Scalable for larger screens
+$presentation-block-margin: 2.4vmin; // More breathing room between blocks
+
+// Headings
+$presentation-heading-color: rgb(9, 9, 11);
+$presentation-heading-line-height: 1.4;
+$presentation-heading-letter-spacing: 0.02vmin;
+$presentation-heading-text-transform: none;
+$presentation-heading-font-weight: bold;
+$presentation-h1-font-size: 3.2em;
+$presentation-h2-font-size: 2em;
+$presentation-h3-font-size: 1.4em;
+$presentation-h4-font-size: 1em;
 
 // Set the root font size on html to be inherited by rem units
 html {
