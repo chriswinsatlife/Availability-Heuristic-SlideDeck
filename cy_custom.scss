@@ -98,6 +98,7 @@ $main-font-size: 3.2vmin; // Default font size relative to viewport for scalabil
 // Set the root font size on html to be inherited by rem units
 html {
   font-size: $main-font-size;
+  line-height: 1.4;
 }
 
 // Align text left
