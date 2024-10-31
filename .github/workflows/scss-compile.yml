@@ -1,4 +1,4 @@
-name: Compile SCSS and Deploy to GitHub Pages
+name: Compile SCSS and Save as Artifact
 
 on:
   push:
@@ -24,11 +24,8 @@ jobs:
       - name: Compile SCSS to CSS
         run: sass cy_custom.scss cy_custom.css
 
-      - name: Verify compiled CSS
-        run: ls -la  # List files to confirm cy_custom.css is generated
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Upload CSS as Artifact
+        uses: actions/upload-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # Deploy the root directory containing cy_custom.css
+          name: compiled-css
+          path: cy_custom.css
