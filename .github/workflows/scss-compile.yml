@@ -24,10 +24,13 @@ jobs:
       - name: Compile SCSS to CSS
         run: sass cy_custom.scss cy_custom.css
 
+      - name: List files in root directory
+        run: ls -la  # Lists all files in the root to verify if cy_custom.css is created
+
       - name: Commit compiled CSS
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
-          git add css/cy_custom.css
+          git add cy_custom.css
           git commit -m "Compile SCSS to CSS"
           git push
