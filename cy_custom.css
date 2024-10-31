@@ -1,0 +1,78 @@
+html {
+  font-size: 8vmin;
+}
+
+.slides {
+  text-align: left !important;
+}
+
+body {
+  text-align: left;
+}
+
+p, strong {
+  width: 100%;
+}
+
+.reveal {
+  background-color: #1e1e2f;
+  color: #ececec;
+  font-family: "Inter", "Source Sans Pro", "Impact", sans-serif;
+  font-size: 4rem;
+}
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+  font-family: "Inter", "Source Sans Pro", "Impact", sans-serif;
+  color: #ececec;
+  margin: 0 0 1rem 0;
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 3.6vmin;
+  }
+}
+@media (max-width: 568px) {
+  html {
+    font-size: 3vmin;
+  }
+}
+.reveal .slides section.title .grid-wrapper {
+  display: grid;
+  grid-template-areas: "header header" "content content" ". credit";
+  grid-template-columns: auto 40%;
+  grid-template-rows: 6vmin 1fr auto;
+  height: 100%;
+  padding: 5vmin;
+}
+.reveal .slides section.title .grid-wrapper .logo {
+  grid-area: header;
+}
+.reveal .slides section.title .grid-wrapper .content {
+  grid-area: content;
+  align-self: center;
+}
+.reveal .slides section.title .grid-wrapper .credit {
+  grid-area: credit;
+  justify-self: end;
+}
+
+@media (max-width: 568px) {
+  .grid-wrapper {
+    grid-template-areas: "header" "content" "credit";
+    grid-template-columns: auto;
+    padding: 3vmin;
+  }
+}
+a {
+  color: #00d1b2;
+}
+a:hover {
+  color: #33e6c6;
+}
+
+::selection {
+  background-color: #ff5e99;
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=cy_custom.css.map */
