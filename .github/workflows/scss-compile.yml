@@ -3,7 +3,7 @@ name: Compile SCSS
 on:
   push:
     branches:
-      - main  # You can specify a different branch if needed
+      - main  # Specify the branch
 
 jobs:
   build:
@@ -25,9 +25,9 @@ jobs:
         run: sass cy_custom.scss cy_custom.css
 
       - name: List files in root directory
-        run: ls -la  # Lists all files in the root to verify if cy_custom.css is created
+        run: ls -la  # Check if cy_custom.css is created
 
-        - name: Commit compiled CSS
+      - name: Commit compiled CSS
         env:
           GH_PAT: ${{ secrets.GH_PAT }}  # Reference the PAT secret
         run: |
