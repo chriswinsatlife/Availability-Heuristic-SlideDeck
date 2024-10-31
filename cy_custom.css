@@ -482,7 +482,7 @@ $selection-color: rgb(27, 27, 33);
 
 $font-family-sans-serif: 'Inter', 'Source Sans Pro', sans-serif;
 $main-font-size: 3.6vmin;
-$presentation-font-size-root: 1em;
+$presentation-font-size-root: 2em;
 $presentation-heading-font: 'Inter', 'Source Sans Pro', sans-serif;
 
 /* Headings and text elements*/
@@ -498,6 +498,10 @@ html {
   font-size: $main-font-size;
   line-height: 1.5;
   text-align: left;
+}
+
+.slides, p, strong {
+  width: 100%;
 }
 
 /* Responsive Reveal.js Styling*/
